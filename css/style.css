@@ -152,12 +152,23 @@ h3 {
 .nav {
     position: fixed;
     inset: 0;
+    z-index: 1001;
     display: grid;
     place-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 5rem 1.5rem 2rem;
     background: var(--clr-deep);
     color: var(--clr-paper);
     transform: translateX(100%);
     transition: transform 250ms ease;
+}
+
+.nav-open .site-header {
+    background: transparent;
+    border-bottom-color: transparent;
+    backdrop-filter: none;
 }
 
 .nav-open .nav {
@@ -179,6 +190,8 @@ h3 {
 }
 
 .nav__list {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,7 +202,8 @@ h3 {
 }
 
 .nav__link {
-    color: inherit;
+    display: block;
+    color: var(--clr-paper);
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;

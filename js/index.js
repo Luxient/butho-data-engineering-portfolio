@@ -9,14 +9,20 @@ if (yearElement) {
 }
 
 if (navToggle) {
+    navToggle.setAttribute('aria-expanded', 'false');
+
     navToggle.addEventListener('click', () => {
         document.body.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
     });
 }
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         document.body.classList.remove('nav-open');
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
     });
 });
 
