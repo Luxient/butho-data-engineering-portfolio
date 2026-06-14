@@ -732,8 +732,18 @@ h3 {
 }
 
 @media (min-width: 860px) {
+    body.nav-open {
+        overflow: visible;
+    }
+
     body.nav-open::before {
         content: none;
+    }
+
+    .nav-open .site-header {
+        background: rgba(255, 255, 255, 0.92);
+        border-bottom-color: rgba(23, 32, 38, 0.1);
+        backdrop-filter: blur(14px);
     }
 
     .nav-toggle {
@@ -743,6 +753,9 @@ h3 {
     .nav {
         position: static;
         display: block;
+        width: auto;
+        min-height: 0;
+        padding: 0;
         background: transparent;
         color: var(--clr-ink);
         transform: none;
@@ -757,6 +770,7 @@ h3 {
         display: block;
         padding: 0.55rem 0.72rem;
         border-radius: 8px;
+        color: var(--clr-ink);
         font-size: 0.98rem;
         font-weight: 700;
     }
@@ -768,6 +782,10 @@ h3 {
 }
 
 @media (max-width: 859px) {
+    body.nav-open {
+        overflow: hidden;
+    }
+
     .nav {
         align-items: start;
         justify-items: stretch;
