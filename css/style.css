@@ -370,6 +370,17 @@ h3 {
     text-align: center;
 }
 
+.section__intro {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--clr-muted);
+    font-size: 1.1rem;
+}
+
+.delivery .section__intro {
+    color: rgba(255, 255, 255, 0.72);
+}
+
 .about {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
