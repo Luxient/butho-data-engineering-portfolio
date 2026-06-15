@@ -795,6 +795,10 @@ h3 {
     box-shadow: 0 24px 60px rgba(15, 29, 34, 0.28);
 }
 
+.chatbot__panel[hidden] {
+    display: none;
+}
+
 .chatbot__header {
     display: flex;
     align-items: flex-start;
