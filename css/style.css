@@ -689,7 +689,23 @@ h3 {
 }
 
 .architecture__flow--five {
-    grid-template-columns: minmax(64px, 1fr) auto minmax(64px, 1fr) auto minmax(64px, 1fr) auto minmax(74px, 1.1fr) auto minmax(68px, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1.12fr) auto minmax(0, 1fr);
+    gap: 0.35rem;
+}
+
+.architecture__flow--five .architecture__node {
+    min-width: 0;
+    padding-inline: 0.3rem;
+}
+
+.architecture__flow--five .architecture__node span {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    font-size: 0.74rem;
+}
+
+.architecture__flow--five .architecture__arrow {
+    font-size: 0.82rem;
 }
 
 .architecture__node {
