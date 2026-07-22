@@ -3,6 +3,7 @@ const navLinks = document.querySelectorAll('.nav__link');
 const yearElement = document.getElementById('year');
 const contactForm = document.getElementById('contactForm');
 const thankYouMessage = document.getElementById('thankYouMessage');
+const revealElements = document.querySelectorAll('.reveal');
 const botAnswers = [
     {
         patterns: ['skill', 'stack', 'tool', 'technology', 'tech'],
@@ -89,6 +90,25 @@ if (contactForm && thankYouMessage) {
             alert('There was an error. Please try again.');
         });
     });
+}
+
+if (revealElements.length) {
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+        revealElements.forEach(element => element.classList.add('is-visible'));
+    }
 }
 
 function createChatbot() {
