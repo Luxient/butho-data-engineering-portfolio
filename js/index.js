@@ -7,7 +7,7 @@ const revealElements = document.querySelectorAll('.reveal');
 const botAnswers = [
     {
         patterns: ['skill', 'stack', 'tool', 'technology', 'tech'],
-        answer: 'Butho works across Microsoft Fabric, Fabric Pipelines, Fabric Data Factory, Lakehouse, Warehouse, Power BI, SQL Server, ADLS Gen2, SSIS, Python, SQL, T-SQL, PostgreSQL, Sybase SQL Anywhere, Apache Airflow, Flask, RabbitMQ, and Git.'
+        answer: 'Butho\'s core stack is SQL Server and the Microsoft data platform: T-SQL, stored procedures, views, Microsoft Fabric, Lakehouse, Warehouse, Power BI, ADLS Gen2, SSIS, and Python. He also has experience with PostgreSQL, Airflow, REST APIs, and Git.'
     },
     {
         patterns: ['experience', 'work history', 'role', 'job', 'q link', 'qlink'],
@@ -23,7 +23,7 @@ const botAnswers = [
     },
     {
         patterns: ['pipeline', 'etl', 'elt', 'ingestion', 'adls', 'parquet', 'csv', 'sybase'],
-        answer: 'He builds Python and platform-based ingestion flows, including extracting from Sybase SQL Anywhere and landing data into ADLS Gen2 in CSV and Parquet formats for downstream Fabric processing.'
+        answer: 'He builds and supports ingestion paths from operational and legacy sources using Python, SSIS, Fabric Pipelines, ADLS Gen2, CSV, and Parquet patterns, then shapes the data for Fabric and SQL Server workloads.'
     },
     {
         patterns: ['reliability', 'production', 'support', 'refresh', 'gateway', 'authentication', 'failure'],
@@ -43,7 +43,7 @@ const botAnswers = [
     },
     {
         patterns: ['project', 'delivery', 'portfolio', 'case study', 'impact'],
-        answer: 'The delivery section highlights data engineering work such as legacy source ingestion to ADLS Gen2, Fabric Lakehouse and Warehouse layers, SQL transformation layers, Power BI support, and pipeline recovery.'
+        answer: 'The delivery section presents three anonymised case studies: a SQL Server reporting layer, a maintainable route into a Fabric Lakehouse, and production pipeline recovery. They explain the engineering approach without exposing confidential company data.'
     }
 ];
 
